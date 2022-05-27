@@ -1,0 +1,3 @@
+    "name": "Venkat-demo-shop",
+    "email": "vds@gmail.com",
+    "password": "randomPass123"

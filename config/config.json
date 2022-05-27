@@ -1,0 +1,39 @@
+{
+  "development": {
+    "database": "postgres",
+    "username": "postgres",
+    "password": "admin123",
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "user1",
+    "password": "keysign123",
+    "database": "keysign",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "postgres",
+    "username": "postgresmidrib",
+    "password": "midrib123",
+    "host": "midribdb.coioq7m3pjap.ap-south-1.rds.amazonaws.com",
+    "port": 5432,
+    "ssl": true,
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": true,
+      "rejectUnauthorized": false
+    }
+  },
+  "use_env_variable": true,
+  "env": {
+    "development": {
+      "url": "http://localhost:5555/"
+    },
+    "production": {
+      "url": "https://api-pos-v5.herokuapp.com/"
+    }
+  }
+}
