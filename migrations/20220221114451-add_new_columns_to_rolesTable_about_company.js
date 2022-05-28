@@ -42,12 +42,11 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.describeTable("Companies").then(tableDefinition => {
-      if (tableDefinition['CountryId']){
-          return queryInterface.removeColumn("Companies", "CountryId");
-      } else {
-          return Promise.resolve(true);
-      }
-    });
+    /**
+     * Add reverting commands here.
+     *
+     * Example:
+     * await queryInterface.dropTable('users');
+     */
   }
 };

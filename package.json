@@ -9,12 +9,11 @@
     "db-seed": "NODE_ENV=development sequelize-cli db:seed:all",
     "db-seed-prod": "NODE_ENV=production sequelize-cli db:seed:all",
     "db-seed:undo": "NODE_ENV=development sequelize-cli db:seed:undo:all",
-    "db-seed-prod:undo": "NODE_ENV=production sequelize-cli db:seed:undo:all",
     "build": "NODE_ENV=production npm-run-all db-migrate",
     "build:migrate": "NODE_ENV=production NODE_TLS_REJECT_UNAUTHORIZED=0 npm-run-all db-migrate",
     "build:migrate:undo": "NODE_ENV=production NODE_TLS_REJECT_UNAUTHORIZED=0 npm-run-all db-migrate:undo",
     "build:seed": "NODE_ENV=production NODE_TLS_REJECT_UNAUTHORIZED=0 npm-run-all db-seed-prod",
-    "build:seed:undo": "NODE_ENV=production NODE_TLS_REJECT_UNAUTHORIZED=0 npm-run-all db-seed-prod:undo",
+    "build:seed:undo": "NODE_ENV=production NODE_TLS_REJECT_UNAUTHORIZED=0 npm-run-all db-seed:undo",
     "start": "node server.js",
     "start:local": "node local/server.js",
     "dev": "nodemon server.js"

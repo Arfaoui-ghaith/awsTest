@@ -15,12 +15,11 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    return queryInterface.describeTable("PosSetups").then(tableDefinition => {
-      if (tableDefinition['name']){
-          return queryInterface.removeColumn("PosSetups", "name");
-      } else {
-          return Promise.resolve(true);
-      }
-    });
+    /**
+     * Add reverting commands here.
+     *
+     * Example:
+     * await queryInterface.dropTable('users');
+     */
   }
 };

@@ -34,9 +34,9 @@ billItemRouter.put('/:id', async (req, res) => {
 
 billItemRouter.get('/:shopId/status/:printerId', async (req, res) => {
     try {
-        // if(!req.params.id){
-        //     return res.status(404).send({message: 'Bill item Id required to perform this action.'});
-        // }
+        if(!req.params.id){
+            return res.status(404).send({message: 'Bill item Id required to perform this action.'});
+        }
         const billItems = await BillItemService.getByStatus(req.params.shopId,req.params.printerId);
         res.status(201).send(billItems);
     } catch (e) {
